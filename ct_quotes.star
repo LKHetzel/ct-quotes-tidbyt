@@ -14,15 +14,15 @@ CACHE_TTL = 86400
 
 # Set these two variables to override the character and/or quote index
 # for easy debugging.
-# DEBUG_CHARACTER = "melchior"
-# DEBUG_INDEX = 0
-DEBUG_CHARACTER = ""
-DEBUG_INDEX = None
+DEBUG_CHARACTER = "magus"
+DEBUG_INDEX = 3
+# DEBUG_CHARACTER = ""
+# DEBUG_INDEX = None
 
 def load_quotes():
-    cache_data = cache.get("ct_quote_data")
+    quotes = cache.get("ct_quote_data")
 
-    if not cache_data:
+    if not quotes:
         req = http.get(QUOTE_FILE)
         if req.status_code != 200:
             print("Request failed: " + str(req.status_code))
@@ -65,11 +65,11 @@ def main(config):
             render.Marquee(
                 height = 32,
                 align = "center",
-                offset_start = 32,
+                offset_start = 15,
                 offset_end = 32,
                 child = render.WrappedText(
                     content = current_quote["text"],
-                    align = "left",
+                    align = current_quote.get("align", "left"),
                     width = current_quote.get("text_width", 45),
                     font = current_quote.get("font", "tb-8"),
                 ),
@@ -102,6 +102,7 @@ def main(config):
             ),
         ),
         delay = anim_speed,
+        show_full_animation = True,
     )
 
 def get_schema():
