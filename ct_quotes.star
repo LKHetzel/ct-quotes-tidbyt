@@ -8,14 +8,15 @@ load("schema.star", "schema")
 
 QUOTE_FILE_VERSION = 1
 QUOTE_FILE = "http://127.0.0.1:8088/quotes_v{}.json".format(str(QUOTE_FILE_VERSION))
+PROD_QUOTE_FILE = "https://raw.githubusercontent.com/jchappell82/ct-quotes-tidbyt/main/quotes_v{}.json".format(str(QUOTE_FILE_VERSION))
 BG_COLOR = "#222"
 QUOTE_CACHE_KEY = "ct_quote_data_v{}".format(str(QUOTE_FILE_VERSION))
 CACHE_TTL = 86400
 
 # Set these two variables to override the character and/or quote index
 # for easy debugging.
-DEBUG_CHARACTER = "magus"
-DEBUG_INDEX = 3
+DEBUG_CHARACTER = "frog"
+DEBUG_INDEX = 0
 # DEBUG_CHARACTER = ""
 # DEBUG_INDEX = None
 
@@ -23,7 +24,7 @@ def load_quotes():
     quotes = cache.get("ct_quote_data")
 
     if not quotes:
-        req = http.get(QUOTE_FILE)
+        req = http.get(PROD_QUOTE_FILE)
         if req.status_code != 200:
             print("Request failed: " + str(req.status_code))
             return {}
