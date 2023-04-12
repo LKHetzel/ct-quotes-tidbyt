@@ -1,17 +1,23 @@
-# Tidbyt Chrono Trigger Quote Generator
+# Tidbyt Craig Stadler Quote Generator
 
-This is a Chrono Trigger quote generator for the Tidbyt, inspired by the NES Quotes generator
-by [Mark McIntyre](https://github.com/tidbyt/community/tree/main/apps/nesquotes). Quotes are
-stored in the versioned JSON file(s) contained in this repo and are cached for a day. Updates
-are published to the existing version unless there is a schema change in the data, at which
-point a new version will be published along with the corresponding code changes.
+This is a quote generator for the Tidbyt, inspired by the other video game quote apps.
 
-Due to the larger size of sprites in SNES titles, many were resampled to better fit the Tidbyt's
-display resolution. It's not perfect, and if you're better at it than I am, please feel free
-to open a pull request with improved images - they're simply base64 encoded gifs.
+However, instead of classics such as games for the NES or Chrono Trigger, this quote generator shows the sage advice from
+Craig "The Walrus" Stadler as he appears in the 1995 game "Pebble Beach Golf Links" for the Sega Saturn.
 
+If you're at all a fan of golf or early Sega Saturn Game memes, this is the Tidbyt app for you.
 
-Sample:
+The code is forked from the Chrono Trigger quote generator by 
+Jessica Chappell (https://github.com/jchappell82/ct-quotes-tidbyt)
 
-![sample image](sample.webp)
+I simply restructured the JSON file to reference a single character `thewalrus`, and added in the quotes and graphics.
+
+The trickiest part of the display is the rendering of Craig, as the graphics were pulled from the Saturn game, they are
+of higher DPI than the Tidbyt is designed for. But at a distance, he doesn't look too bad - you can make out his 'stache.
+
+The v2 version of the quotes are not finished, due to formatting issues, but are committed to the repository for safe-keeping.
+
+This app is for entertainment purposes only and is not sponsored or supported by Craig Stadler, 
+the Pebble Beach Company or the current owner of the "Pebble Beach Golf Links" video game code 
+and intellectual property and trademarks. No infringement is intended by the author of this app.
 
