@@ -8,7 +8,7 @@ load("schema.star", "schema")
 
 QUOTE_FILE_VERSION = 1
 QUOTE_FILE = "http://127.0.0.1:8088/quotes_v{}.json".format(str(QUOTE_FILE_VERSION))
-PROD_QUOTE_FILE = "http://127.0.0.1:8088/quotes_v{}.json".format(str(QUOTE_FILE_VERSION))
+PROD_QUOTE_FILE = "https://raw.githubusercontent.com/LKHetzel/pbgl-quotes-tidbyt/main/quotes_v1.json".format(str(QUOTE_FILE_VERSION))
 BG_COLOR = "#222"
 QUOTE_CACHE_KEY = "pbgl_quote_data_v{}".format(str(QUOTE_FILE_VERSION))
 CACHE_TTL = 86400

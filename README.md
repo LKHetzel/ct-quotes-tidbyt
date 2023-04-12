@@ -8,14 +8,19 @@ Craig "The Walrus" Stadler as he appears in the 1995 game "Pebble Beach Golf Lin
 If you're at all a fan of golf or early Sega Saturn Game memes, this is the Tidbyt app for you.
 
 The code is forked from the Chrono Trigger quote generator by 
-Jessica Chappell (https://github.com/jchappell82/ct-quotes-tidbyt)
+[Jessica Chappell](https://github.com/jchappell82/ct-quotes-tidbyt)
 
-I simply restructured the JSON file to reference a single character `thewalrus`, and added in the quotes and graphics.
+I simply restructured the JSON file to reference a single character `thewalrus`, and added in the quotes and graphic(s).
 
 The trickiest part of the display is the rendering of Craig, as the graphics were pulled from the Saturn game, they are
 of higher DPI than the Tidbyt is designed for. But at a distance, he doesn't look too bad - you can make out his 'stache.
 
 The v2 version of the quotes are not finished, due to formatting issues, but are committed to the repository for safe-keeping.
+
+Additional graphics are due in a future update, and will activate when a cached version is updated on the Tidbyt.
+
+Sample:
+![sample image](sample.webp)
 
 This app is for entertainment purposes only and is not sponsored or supported by Craig Stadler, 
 the Pebble Beach Company or the current owner of the "Pebble Beach Golf Links" video game code 
