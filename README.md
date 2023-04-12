@@ -20,4 +20,3 @@ The v2 version of the quotes are not finished, due to formatting issues, but are
 This app is for entertainment purposes only and is not sponsored or supported by Craig Stadler, 
 the Pebble Beach Company or the current owner of the "Pebble Beach Golf Links" video game code 
 and intellectual property and trademarks. No infringement is intended by the author of this app.
-
